@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Career Advisor AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 AI Career Prediction</h1>
+    <form action="/predict" method="post">
+      <label>Technical Skill (0-10)</label>
+      <input type="number" name="skill" min="0" max="10" required />
+
+      <label>Logical Reasoning (0-10)</label>
+      <input type="number" name="logic" min="0" max="10" required />
+
+      <label>Creativity (0-10)</label>
+      <input type="number" name="creativity" min="0" max="10" required />
+
+      <label>Teamwork (0-10)</label>
+      <input type="number" name="teamwork" min="0" max="10" required />
+
+      <button type="submit">Predict Career</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+      <h2>Suggested Career: {{ result }}</h2>
+      <h3>Upskilling Suggestions:</h3>
+      <ul>
+        {% for c in courses %}
+          <li>{{ c }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
