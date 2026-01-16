@@ -1,4 +1,4 @@
-# Career Advisor AI
+# AI for Career Prediction & Upskilling Advisor
 
 AI-powered Career Prediction & Upskilling Advisor built with Flask.
 
@@ -34,5 +34,6 @@ It also recommends relevant upskilling courses based on the predicted career.
 │ └── career_model.pkl
 ├── train_model.py
 └── README.md
+
 
 
