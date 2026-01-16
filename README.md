@@ -23,3 +23,16 @@ It also recommends relevant upskilling courses based on the predicted career.
 
 ## 📦 Folder Structure
 
+/AI for Career Prediction & Upskilling Advisor
+├── app.py
+├── requirements.txt
+├── templates/
+│ └── index.html
+├── static/
+│ └── style.css
+├── model/
+│ └── career_model.pkl
+├── train_model.py
+└── README.md
+
+
